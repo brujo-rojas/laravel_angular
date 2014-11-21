@@ -16,3 +16,4 @@ Blade::setEscapedContentTags('<%%', '%%>'); 	// for escaped data
 
 
 Route::get('/', 'HomeController@showWelcome');
+Route::get('/f/clase', 'FrontController@clase');
