@@ -1,0 +1,14 @@
+.greybox {
+    background: rgb(237, 237, 237);
+    padding: 17px;
+    textarea {
+        width: 100%;
+        display: block;
+        max-width: 100%;
+        min-width: 100%;
+        resize: none;
+    }
+    span {
+        display: block;
+    }
+}
