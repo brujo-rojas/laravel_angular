@@ -6,11 +6,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
+    <!-- build:css(.) css/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(public/) styles/main.css -->
+    <!-- build:css(public/) css/main.css -->
     @if (\Config::get("app.debug"))
       <link rel="stylesheet" href="css/main.css">
     @else
@@ -60,7 +60,7 @@
     <![endif]-->
     <!-- endbuild -->
     @if (\Config::get("app.debug"))
-      <!-- build:js(public/) scripts/vendor-index.js -->
+      <!-- build:js(public/) js/vendor-index.js -->
       <!-- bower:js -->
       <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/angular/angular.js"></script>
@@ -86,17 +86,17 @@
       <!-- endbuild -->
 
     @else
-      <script src= "dist/scripts/vendor-index.js?v=1.0.0"></script>
+      <script src= "dist/js/vendor-index.js?v=1.0.0"></script>
     @endif
 
     @if (\Config::get("app.debug"))
-        <!-- build:js(public/) scripts/scripts-index.js -->
+        <!-- build:js(public/) js/scripts-index.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <!-- endbuild -->
     @else
-      <script src= "dist/scripts/scripts-index.js?v=1.0.0"></script>
+      <script src= "dist/js/scripts-index.js?v=1.0.0"></script>
     @endif
 </body>
 </html>
