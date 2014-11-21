@@ -8,7 +8,10 @@
 // 'test/spec/**/*.js'
 
 module.exports = function (grunt) {
-
+  var archivos_blade = [
+    'app/views/index.blade.php',
+    'app/views/clase/clase.blade.php'
+  ];  
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
@@ -217,7 +220,7 @@ module.exports = function (grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: 'app/views/index.blade.php',
+      html: archivos_blade,
       options: {
         dest: '<%= yeoman.dist %>',
         flow: {
