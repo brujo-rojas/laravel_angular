@@ -1,0 +1,33 @@
+@import "../commons/common.scss";
+
+// $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+#login-info{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+header {
+    
+}
+
+#principal-container {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: green;
+} 
+
+
+@media (min-width: 768px){
+    .navbar-nav{
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
+}
