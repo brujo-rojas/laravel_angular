@@ -31,7 +31,7 @@
    
    
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-tokin navbar-fixed-top" role="navigation">
           <div class="container-fluid">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -53,8 +53,11 @@
               </ul>
             </div><!--/.nav-collapse -->
           </div>
+          <section class="subnav-tokin">
+              <span class="info"><span class="title">Asignatura:</span> Matemáticas</span>
+              <span class="info"><span class="title">Nivel:</span> 2˚ Básico</span>
+          </section>
         </nav>
-        
     </header>
     
     
@@ -65,13 +68,103 @@
     
         
     <div id="principal-container" class="container">
-        
+
+
+
+      <div class="row">
         <div class="col-sm-6">
-            <section class="greybox"></section>
-            <span class="title-greybox">Objetivo de la Clase</span>
-            <textarea name="obj-clase" id="obj-clase" ></textarea>
+
+          <span class="title-clase">Clase 1</span>
+          <button class="btn btn-grey pull-right">17 Oct, 2014 <span class="glyphicon glyphicon-calendar"></span></button>
+
         </div>
-        
+        <div class="col-sm-6">
+
+          <button class="btn btn-grey">Imprimir <span class="glyphicon glyphicon-print"></span></button>
+
+          <div class="checkbox-green pull-right">
+            <input type="checkbox" value="None" id="check" name="check" />
+            <label for="check"></label>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-sm-6">
+            <section class="greybox">
+              <span class="title-greybox">Objetivo de la Clase</span>
+              <textarea name="obj-clase" id="obj-clase" ></textarea>
+            </section>
+
+
+            <section class="greybox">
+              <div class="row row-oa-box">
+                <div class="col-sm-12">
+                  <span class="title-greybox">Objetivos de Aprendizaje</span>
+                  <button type="button" class="btn btn-blue btn-sm pull-right">Agregar o Quitar</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12">
+
+
+                  <div class="oa-item oa-red">
+                    <span class="title-oa">OA 01</span>
+                    <span class="description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, modi est molestias aliquid odio omnis nemo asperiores. Voluptas doloribus veniam accusantium architecto porro ratione magni natus. Ipsum, doloremque dolore blanditiis.
+                    </span>
+                  </div>
+
+
+                  <div class="oa-item oa-green">
+                    <span class="title-oa">0A 02</span>
+                    <span class="description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, modi est molestias aliquid odio omnis nemo asperiores. Voluptas doloribus veniam accusantium architecto porro ratione magni natus. Ipsum, doloremque dolore blanditiis.
+                    </span>
+                  </div>
+
+
+                  <div class="oa-item oa-blue">
+                    <span class="title-oa">OA 03</span>
+                    <span class="description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, modi est molestias aliquid odio omnis nemo asperiores. Voluptas doloribus veniam accusantium architecto porro ratione magni natus. Ipsum, doloremque dolore blanditiis.
+                    </span>
+                  </div>
+
+
+                </div>
+              </div>
+            </section>
+        </div>
+        <div class="col-sm-6">
+
+            <section class="greybox">
+              <span class="title-greybox">Inicio</span>
+              <textarea name="obj-clase" id="obj-clase" ></textarea>
+              <a href="" class="suggestion-greybox">Sugerencia</a>
+            </section>
+
+
+            <section class="greybox">
+              <span class="title-greybox">Desarrollo</span>
+              <textarea name="obj-clase" id="obj-clase" ></textarea>
+              <a href="" class="suggestion-greybox">Sugerencia</a>
+            </section>
+
+
+            <section class="greybox">
+              <span class="title-greybox">Cierre</span>
+              <textarea name="obj-clase" id="obj-clase" ></textarea>
+              <a href="" class="suggestion-greybox">Sugerencia</a>
+            </section>
+
+        </div>
+      </div>
+
+
     </div>
        
        
