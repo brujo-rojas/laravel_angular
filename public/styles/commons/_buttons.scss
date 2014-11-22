@@ -1,0 +1,7 @@
+
+.btn-grey{
+    @include button-variant(black, $fondo_gris, $borde_gris);
+}
+.btn-blue{
+    @include button-variant(white, $fondo_azul, $fondo_azul);
+}

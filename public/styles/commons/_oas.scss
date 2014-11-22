@@ -1,0 +1,23 @@
+@import "colors";
+$ancho_borde_oa : 6px;
+
+
+[class ^="oa-"]{
+        padding-left: $border-greybox - $ancho_borde_oa + 20px;
+        margin-left: -($border-greybox + $ancho_borde);
+        margin-bottom: 30px;
+        color: rgb(102,102,102);
+        .title-oa{
+        	font-weight: $bold;
+        	display: block;
+        	font-size: 20px;
+        }
+}
+@each $name, $color in $colors {
+    .oa-#{$name} {
+        border-left: $ancho_borde_oa solid $color;
+        .title-oa{
+        	color: $color;
+        }
+    }
+} 
