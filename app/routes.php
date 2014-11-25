@@ -17,3 +17,10 @@ Blade::setEscapedContentTags('<%%', '%%>'); 	// for escaped data
 
 Route::get('/', 'HomeController@showWelcome');
 Route::get('/f/clase', 'FrontController@clase');
+Route::get('/f/exp1', 'FrontController@exp1');
+Route::get('/f/exp1/mostrar', 'FrontController@mostrar');
+
+
+Route::get("/f/exp1/lista", function(){
+	return View::make("exp.uno.lista");
+});
