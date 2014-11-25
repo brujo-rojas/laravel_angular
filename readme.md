@@ -44,7 +44,7 @@ el codigo comentado dentro borra espacios y saltos de lineas innecesarios
 
 para dejar compilado el codigo
 
-```
+```php
 <?php
     //... filters.php
 
