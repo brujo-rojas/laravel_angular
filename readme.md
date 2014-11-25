@@ -1,25 +1,70 @@
-## Laravel PHP Framework
+#Información para frontend
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+iniciar el proyecto
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+```bash
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+    npm install
+    
+    bower install
+    
+    # compila y minifica javascript y css en /dist
+    grunt build 
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+    #watch para compilar SASS, mas rapido que grunt watch
+    compass compile
 
-## Official Documentation
+```
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
 
-### Contributing To Laravel
+##explicaciones generales
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+cambio de sintaxis en blade, cambiando las llaves por simbolos distintos
 
-### License
+esto es para mantener la compatibilidad entre blade y angular
+```php
+    <?php 
+    // routes.php
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+    Blade::setContentTags('<%', '%>');      // for variables and all things Blade
+    Blade::setEscapedContentTags('<%%', '%%>');     // for escaped data
+
+
+```
+
+
+
+
+
+cambios en salida de html desde las vistas
+
+esto limpia de comentarios la salida
+
+el codigo comentado dentro borra espacios y saltos de lineas innecesarios
+
+para dejar compilado el codigo
+
+```
+<?php
+    //... filters.php
+
+    App::after(function($request, $response)
+    {
+        // HTML Minification
+        if(App::Environment() != 'local')
+        {
+            if($response instanceof Illuminate\Http\Response)
+            {
+                $output = $response->getOriginalContent();
+                // Clean comments
+                $output = preg_replace('/<!--([^\[|(<!)].*)/', '', $output);
+                $output = preg_replace('/(?<!\S)\/\/\s*[^\r\n]*/', '', $output);
+                // Clean Whitespace
+                //$output = preg_replace('/\s{2,}/', '', $output);
+                //$output = preg_replace('/(\r?\n)/', '', $output);
+                $response->setContent($output);
+            }
+        }
+    });
+
+```
