@@ -10,7 +10,8 @@
 angular.module('publicApp')
   .controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
 
-    $http.get('/f/exp1/mostrar').success(function(data) {
+  	//al iniciar este controller, hace una peticion en mostrar
+    $http.get('/f/exp1/lista').success(function(data) {
       $scope.lista = data;
     });
 

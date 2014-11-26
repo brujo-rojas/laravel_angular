@@ -20,7 +20,30 @@ Route::get('/f/clase', 'FrontController@clase');
 Route::get('/f/exp1', 'FrontController@exp1');
 Route::get('/f/exp1/mostrar', 'FrontController@mostrar');
 
-
 Route::get("/f/exp1/lista", function(){
 	return View::make("exp.uno.lista");
 });
+
+
+
+
+
+
+
+Route::get('/f/exp2', 							'CrudController@getIndex');
+Route::get('/f/exp2/template', 					'CrudController@getTemplate');
+Route::get('/f/exp2/lista', 					'CrudController@getLista');
+Route::delete('/f/exp2/item/{id_item}', 		'CrudController@deleteItem');
+Route::put('/f/exp2/item',						'CrudController@addItem');
+
+
+
+
+
+
+
+
+
+
+
+
